@@ -69,6 +69,24 @@
             android:entryValues="@array/status_bar_am_pm_values"
             android:defaultValue="2"
             app:useSimpleSummaryProvider="true" />
+
+        <SeekBarPreference
+            android:key="status_bar_clock_size"
+            android:title="@string/status_bar_clock_size_title"
+            android:max="24"
+            android:persistent="false"
+            app:min="10"
+            app:showSeekBarValue="true"
+            app:updatesContinuously="true" />
+
+        <SeekBarPreference
+            android:key="qs_header_clock_size"
+            android:title="@string/qs_header_clock_size_title"
+            android:max="24"
+            android:persistent="false"
+            app:min="10"
+            app:showSeekBarValue="true"
+            app:updatesContinuously="true" />
     </PreferenceCategory>
 
     <PreferenceCategory

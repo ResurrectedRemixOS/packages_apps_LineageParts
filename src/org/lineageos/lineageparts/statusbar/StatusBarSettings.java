@@ -16,6 +16,7 @@ import android.text.TextUtils;
 import android.text.format.DateFormat;
 
 import androidx.preference.PreferenceCategory;
+import androidx.preference.SeekBarPreference;
 
 import com.android.settingslib.fuelgauge.BatteryUtils;
 
@@ -55,6 +56,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment {
 
     private static final String NETWORK_TRAFFIC_SETTINGS = "network_traffic_settings";
 
+    // Read by SystemUI's Clock in sp; 0 (unset) keeps the stock 14sp.
+    private static final String STATUS_BAR_CLOCK_SIZE = "status_bar_clock_size";
+    private static final String QS_HEADER_CLOCK_SIZE = "qs_header_clock_size";
+    private static final int DEFAULT_CLOCK_SIZE = 14;
+
     private LineageSecureSettingListPreference mQsBrightnessSliderPosition;
     private LineageSecureSettingSwitchPreference mQsShowAutoBrightness;
     private LineageSystemSettingListPreference mQuickPulldown;
@@ -76,6 +82,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment {
         mStatusBarClock = findPreference(STATUS_BAR_CLOCK_STYLE);
 
         mStatusBarClockCategory = getPreferenceScreen().findPreference(CATEGORY_CLOCK);
+        bindClockSize(STATUS_BAR_CLOCK_SIZE);
+        bindClockSize(QS_HEADER_CLOCK_SIZE);
 
         mStatusBarBatteryShowPercent = findPreference(STATUS_BAR_SHOW_BATTERY_PERCENT);
         LineageSystemSettingListPreference statusBarBattery =
@@ -192,5 +200,17 @@ public class StatusBarSettings extends SettingsPreferenceFragment {
         int position = LineageSettings.Secure.getInt(getActivity().getContentResolver(),
                 LineageSettings.Secure.NETWORK_TRAFFIC_POSITION, /* Center */ 1);
         return mode != 0 && position == 1 ? 1 : 0;
+    }
+
+    private void bindClockSize(String key) {
+        SeekBarPreference pref = findPreference(key);
+        if (pref == null) {
+            return;
+        }
+        int size = Settings.System.getInt(requireContext().getContentResolver(), key, 0);
+        pref.setValue(size > 0 ? size : DEFAULT_CLOCK_SIZE);
+        pref.setOnPreferenceChangeListener((preference, value) ->
+                Settings.System.putInt(requireContext().getContentResolver(), key,
+                        (Integer) value));
     }
 }
