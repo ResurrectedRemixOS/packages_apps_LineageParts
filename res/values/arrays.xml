@@ -271,6 +271,7 @@
         <item>@string/status_bar_battery_style_text</item>
         <item>@string/status_bar_battery_style_neon_ring</item>
         <item>@string/status_bar_battery_style_pill</item>
+        <item>@string/status_bar_battery_style_big_percent</item>
     </string-array>
 
     <string-array name="status_bar_battery_style_values" translatable="false">
@@ -280,6 +281,7 @@
         <item>2</item>
         <item>4</item>
         <item>5</item>
+        <item>6</item>
     </string-array>
 
     <string-array name="status_bar_battery_percentage_entries" translatable="false">

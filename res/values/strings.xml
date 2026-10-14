@@ -696,4 +696,5 @@
     <string name="sms_security_check_limit_always_confirm">Always confirm</string>
     <string name="status_bar_battery_style_neon_ring">Neon ring</string>
     <string name="status_bar_battery_style_pill">Slim pill</string>
+    <string name="status_bar_battery_style_big_percent">Big percentage</string>
 </resources>
