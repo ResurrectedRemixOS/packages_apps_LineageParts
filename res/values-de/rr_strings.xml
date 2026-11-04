@@ -3,4 +3,6 @@
     <string name="status_bar_battery_style_neon_ring">Neonring</string>
     <string name="status_bar_battery_style_pill">Schmale Leiste</string>
     <string name="status_bar_battery_style_big_percent">Große Prozentanzeige</string>
+    <string name="status_bar_clock_size_title">Größe der Uhr in der Statusleiste</string>
+    <string name="qs_header_clock_size_title">Größe der Uhr in den Schnelleinstellungen</string>
 </resources>

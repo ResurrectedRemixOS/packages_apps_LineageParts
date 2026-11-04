@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="status_bar_clock_size_title">స్టేటస్‌ బార్‌ గడియారం పరిమాణం</string>
+    <string name="qs_header_clock_size_title">క్విక్ సెట్టింగ్స్ గడియారం పరిమాణం</string>
+    <string name="status_bar_battery_style_neon_ring">నియాన్ రింగ్</string>
+    <string name="status_bar_battery_style_pill">స్లిమ్ పిల్</string>
+    <string name="status_bar_battery_style_big_percent">పెద్ద శాతం</string>
+</resources>

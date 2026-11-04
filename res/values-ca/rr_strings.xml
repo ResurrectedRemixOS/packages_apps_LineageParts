@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="status_bar_clock_size_title">Mida del rellotge de la barra d\'estat</string>
+    <string name="qs_header_clock_size_title">Mida del rellotge de la configuració ràpida</string>
+    <string name="status_bar_battery_style_neon_ring">Anell de neó</string>
+    <string name="status_bar_battery_style_pill">Píndola prima</string>
+    <string name="status_bar_battery_style_big_percent">Percentatge gran</string>
+</resources>

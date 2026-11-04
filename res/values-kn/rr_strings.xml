@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="status_bar_clock_size_title">ಸ್ಥಿತಿ ಪಟ್ಟಿ ಗಡಿಯಾರದ ಗಾತ್ರ</string>
+    <string name="qs_header_clock_size_title">ತ್ವರಿತ ಸೆಟ್ಟಿಂಗ್‍ಗಳ ಗಡಿಯಾರದ ಗಾತ್ರ</string>
+    <string name="status_bar_battery_style_neon_ring">ನಿಯಾನ್ ರಿಂಗ್</string>
+    <string name="status_bar_battery_style_pill">ಸ್ಲಿಮ್ ಪಿಲ್</string>
+    <string name="status_bar_battery_style_big_percent">ದೊಡ್ಡ ಶೇಕಡಾವಾರು</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="status_bar_clock_size_title">የሁኔታ አሞሌ የሰዓት መጠን</string>
+    <string name="qs_header_clock_size_title">ፈጣን ቅንብሮች የሰዓት መጠን</string>
+    <string name="status_bar_battery_style_neon_ring">ኒዮን ቀለበት</string>
+    <string name="status_bar_battery_style_pill">ቀጭን ክኒን</string>
+    <string name="status_bar_battery_style_big_percent">ትልቅ መቶኛ</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="status_bar_clock_size_title">Būsenos juostos laikrodžio dydis</string>
+    <string name="qs_header_clock_size_title">Spartiųjų nustatymų laikrodžio dydis</string>
+    <string name="status_bar_battery_style_neon_ring">Neoninis žiedas</string>
+    <string name="status_bar_battery_style_pill">Plona pilulė</string>
+    <string name="status_bar_battery_style_big_percent">Didelis procentas</string>
+</resources>

@@ -3,4 +3,6 @@
     <string name="status_bar_battery_style_neon_ring">Неоновое кольцо</string>
     <string name="status_bar_battery_style_pill">Тонкая полоска</string>
     <string name="status_bar_battery_style_big_percent">Большой процент</string>
+    <string name="status_bar_clock_size_title">Размер часов в строке состояния</string>
+    <string name="qs_header_clock_size_title">Размер часов в быстрых настройках</string>
 </resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="status_bar_clock_size_title">સ્ટેટસ બાર ઘડિયાળનું કદ</string>
+    <string name="qs_header_clock_size_title">ઝડપી સેટિંગ ઘડિયાળનું કદ</string>
+    <string name="status_bar_battery_style_neon_ring">નિયોન રિંગ</string>
+    <string name="status_bar_battery_style_pill">પાતળી પિલ</string>
+    <string name="status_bar_battery_style_big_percent">મોટી ટકાવારી</string>
+</resources>

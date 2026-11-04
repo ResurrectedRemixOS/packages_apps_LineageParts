@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="status_bar_clock_size_title">ଷ୍ଟାଟସ୍‍ ବାର୍‍ ଘଡ଼ିର ଆକାର</string>
+    <string name="qs_header_clock_size_title">କ୍ୱିକ ସେଟିଂସ ଘଡ଼ିର ଆକାର</string>
+    <string name="status_bar_battery_style_neon_ring">ନିଅନ୍ ରିଙ୍ଗ</string>
+    <string name="status_bar_battery_style_pill">ପତଳା ପିଲ୍</string>
+    <string name="status_bar_battery_style_big_percent">ବଡ଼ ଶତକଡ଼ା</string>
+</resources>

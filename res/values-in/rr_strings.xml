@@ -3,4 +3,6 @@
     <string name="status_bar_battery_style_neon_ring">Cincin neon</string>
     <string name="status_bar_battery_style_pill">Pil ramping</string>
     <string name="status_bar_battery_style_big_percent">Persentase besar</string>
+    <string name="status_bar_clock_size_title">Ukuran jam bilah status</string>
+    <string name="qs_header_clock_size_title">Ukuran jam setelan cepat</string>
 </resources>

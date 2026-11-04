@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="status_bar_clock_size_title">ទំហំនាឡិកានៅរបារស្ថានភាព</string>
+    <string name="qs_header_clock_size_title">ទំហំនាឡិកានៅការកំណត់រហ័ស</string>
+    <string name="status_bar_battery_style_neon_ring">រង្វង់នេអុង</string>
+    <string name="status_bar_battery_style_pill">ថ្នាំងស្តើង</string>
+    <string name="status_bar_battery_style_big_percent">ភាគរយធំ</string>
+</resources>

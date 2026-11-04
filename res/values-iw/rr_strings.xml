@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="status_bar_clock_size_title">גודל שעון בשורת הסטטוס</string>
+    <string name="qs_header_clock_size_title">גודל שעון בהגדרות מהירות</string>
+    <string name="status_bar_battery_style_neon_ring">טבעת ניאון</string>
+    <string name="status_bar_battery_style_pill">סרגל סוללה דק</string>
+    <string name="status_bar_battery_style_big_percent">אחוז גדול</string>
+</resources>

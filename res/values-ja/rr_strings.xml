@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="status_bar_clock_size_title">ステータスバーの時計のサイズ</string>
+    <string name="qs_header_clock_size_title">クイック設定の時計のサイズ</string>
+    <string name="status_bar_battery_style_neon_ring">ネオン リング</string>
+    <string name="status_bar_battery_style_pill">スリム ピル</string>
+    <string name="status_bar_battery_style_big_percent">大きいパーセント表示</string>
+</resources>

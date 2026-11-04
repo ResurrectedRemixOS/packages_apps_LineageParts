@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="status_bar_clock_size_title">स्टेटस बार घड़ी का आकार</string>
+    <string name="qs_header_clock_size_title">क्विक सेटिंग घड़ी का आकार</string>
+    <string name="status_bar_battery_style_neon_ring">नियॉन रिंग</string>
+    <string name="status_bar_battery_style_pill">पतली पिल</string>
+    <string name="status_bar_battery_style_big_percent">बड़ा प्रतिशत</string>
+</resources>

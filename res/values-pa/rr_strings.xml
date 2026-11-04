@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="status_bar_clock_size_title">ਸਥਿਤੀ ਪੱਟੀ ਘੜੀ ਦਾ ਆਕਾਰ</string>
+    <string name="qs_header_clock_size_title">ਤਤਕਾਲ ਸੈਟਿੰਗਾਂ ਘੜੀ ਦਾ ਆਕਾਰ</string>
+    <string name="status_bar_battery_style_neon_ring">ਨੀਓਨ ਰਿੰਗ</string>
+    <string name="status_bar_battery_style_pill">ਪਤਲੀ ਗੋਲੀ</string>
+    <string name="status_bar_battery_style_big_percent">ਵੱਡੀ ਪ੍ਰਤੀਸ਼ਤ</string>
+</resources>
