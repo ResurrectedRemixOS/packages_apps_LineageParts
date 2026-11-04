@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="status_bar_battery_style_neon_ring">Anel neon</string>
+    <string name="status_bar_battery_style_pill">Pílula fina</string>
+    <string name="status_bar_battery_style_big_percent">Porcentagem grande</string>
+</resources>
