@@ -12,6 +12,7 @@ import android.os.Bundle;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
+import androidx.preference.SeekBarPreference;
 
 import lineageos.preference.LineageSecureSettingSwitchPreference;
 import lineageos.providers.LineageSettings;
@@ -46,6 +47,14 @@ public class NetworkTrafficSettings extends SettingsPreferenceFragment
     private LineageSecureSettingSwitchPreference mNetTrafficHideArrows;
     private ListPreference mNetTrafficUnits;
     private ListPreference mNetTrafficShowUnits;
+    private ListPreference mNetTrafficStyle;
+    private NetworkTrafficArrowsPreference mNetTrafficArrows;
+    private SeekBarPreference mNetTrafficSize;
+    private ListPreference mNetTrafficColor;
+    private LineageSecureSettingSwitchPreference mNetTrafficLiveArrows;
+    private SeekBarPreference mNetTrafficAutohideThreshold;
+    private ListPreference mNetTrafficRefresh;
+    private LineageSecureSettingSwitchPreference mNetTrafficMobileOnly;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -112,6 +121,39 @@ public class NetworkTrafficSettings extends SettingsPreferenceFragment
         mNetTrafficShowUnits.setOnPreferenceChangeListener(this);
         adjustShowUnitsState(units, resolver);
 
+        mNetTrafficStyle = findPreference(LineageSettings.Secure.NETWORK_TRAFFIC_STYLE);
+        mNetTrafficStyle.setOnPreferenceChangeListener(this);
+        mNetTrafficStyle.setValue(String.valueOf(LineageSettings.Secure.getInt(resolver,
+                LineageSettings.Secure.NETWORK_TRAFFIC_STYLE, 0)));
+
+        mNetTrafficArrows = findPreference(LineageSettings.Secure.NETWORK_TRAFFIC_ARROWS);
+
+        mNetTrafficSize = findPreference(LineageSettings.Secure.NETWORK_TRAFFIC_SIZE);
+        mNetTrafficSize.setOnPreferenceChangeListener(this);
+        mNetTrafficSize.setValue(LineageSettings.Secure.getInt(resolver,
+                LineageSettings.Secure.NETWORK_TRAFFIC_SIZE, 100));
+
+        mNetTrafficColor = findPreference(LineageSettings.Secure.NETWORK_TRAFFIC_COLOR);
+        mNetTrafficColor.setOnPreferenceChangeListener(this);
+        mNetTrafficColor.setValue(String.valueOf(LineageSettings.Secure.getInt(resolver,
+                LineageSettings.Secure.NETWORK_TRAFFIC_COLOR, 0)));
+
+        mNetTrafficLiveArrows = findPreference(LineageSettings.Secure.NETWORK_TRAFFIC_LIVE_ARROWS);
+
+        mNetTrafficAutohideThreshold =
+                findPreference(LineageSettings.Secure.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD);
+        mNetTrafficAutohideThreshold.setOnPreferenceChangeListener(this);
+        final int threshold = LineageSettings.Secure.getInt(resolver,
+                LineageSettings.Secure.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 0);
+        mNetTrafficAutohideThreshold.setValue(threshold > 0 ? threshold : 1);
+
+        mNetTrafficRefresh = findPreference(LineageSettings.Secure.NETWORK_TRAFFIC_REFRESH);
+        mNetTrafficRefresh.setOnPreferenceChangeListener(this);
+        mNetTrafficRefresh.setValue(String.valueOf(LineageSettings.Secure.getInt(resolver,
+                LineageSettings.Secure.NETWORK_TRAFFIC_REFRESH, 2)));
+
+        mNetTrafficMobileOnly = findPreference(LineageSettings.Secure.NETWORK_TRAFFIC_MOBILE_ONLY);
+
         updateEnabledStates(mode);
     }
 
@@ -135,6 +177,24 @@ public class NetworkTrafficSettings extends SettingsPreferenceFragment
             int showUnits = Integer.valueOf((String) newValue);
             LineageSettings.Secure.putInt(getActivity().getContentResolver(),
                     LineageSettings.Secure.NETWORK_TRAFFIC_SHOW_UNITS, showUnits);
+        } else if (preference == mNetTrafficStyle) {
+            LineageSettings.Secure.putInt(getActivity().getContentResolver(),
+                    LineageSettings.Secure.NETWORK_TRAFFIC_STYLE,
+                    Integer.parseInt((String) newValue));
+        } else if (preference == mNetTrafficSize) {
+            LineageSettings.Secure.putInt(getActivity().getContentResolver(),
+                    LineageSettings.Secure.NETWORK_TRAFFIC_SIZE, (Integer) newValue);
+        } else if (preference == mNetTrafficColor) {
+            LineageSettings.Secure.putInt(getActivity().getContentResolver(),
+                    LineageSettings.Secure.NETWORK_TRAFFIC_COLOR,
+                    Integer.parseInt((String) newValue));
+        } else if (preference == mNetTrafficAutohideThreshold) {
+            LineageSettings.Secure.putInt(getActivity().getContentResolver(),
+                    LineageSettings.Secure.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, (Integer) newValue);
+        } else if (preference == mNetTrafficRefresh) {
+            LineageSettings.Secure.putInt(getActivity().getContentResolver(),
+                    LineageSettings.Secure.NETWORK_TRAFFIC_REFRESH,
+                    Integer.parseInt((String) newValue));
         }
         return true;
     }
@@ -179,6 +239,14 @@ public class NetworkTrafficSettings extends SettingsPreferenceFragment
         mNetTrafficHideArrows.setEnabled(enabled);
         mNetTrafficUnits.setEnabled(enabled);
         mNetTrafficShowUnits.setEnabled(enabled);
+        mNetTrafficStyle.setEnabled(enabled);
+        mNetTrafficArrows.setEnabled(enabled);
+        mNetTrafficSize.setEnabled(enabled);
+        mNetTrafficColor.setEnabled(enabled);
+        mNetTrafficLiveArrows.setEnabled(enabled);
+        mNetTrafficAutohideThreshold.setEnabled(enabled);
+        mNetTrafficRefresh.setEnabled(enabled);
+        mNetTrafficMobileOnly.setEnabled(enabled);
     }
 
     private int getClockPosition() {

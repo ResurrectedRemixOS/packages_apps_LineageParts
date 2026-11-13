@@ -23,32 +23,113 @@
         android:title="@string/network_traffic_position_title"
         app:useSimpleSummaryProvider="true" />
 
-    <lineageos.preference.LineageSecureSettingSwitchPreference
-        android:defaultValue="false"
-        android:key="network_traffic_autohide"
-        android:summary="@string/network_traffic_autohide_summary"
-        android:title="@string/network_traffic_autohide" />
+    <PreferenceCategory
+        android:key="network_traffic_appearance"
+        android:title="@string/network_traffic_appearance_title">
 
-    <lineageos.preference.LineageSecureSettingSwitchPreference
-        android:defaultValue="false"
-        android:key="network_traffic_hide_arrows"
-        android:summary="@string/network_traffic_hide_arrows_summary"
-        android:title="@string/network_traffic_hide_arrows" />
+        <ListPreference
+            android:entries="@array/network_traffic_style_entries"
+            android:entryValues="@array/network_traffic_style_values"
+            android:key="network_traffic_style"
+            android:persistent="false"
+            android:title="@string/network_traffic_style_title"
+            app:useSimpleSummaryProvider="true" />
 
-    <ListPreference
-        android:entries="@array/network_traffic_units_entries"
-        android:entryValues="@array/network_traffic_units_values"
-        android:key="network_traffic_units"
-        android:persistent="false"
-        android:title="@string/network_traffic_units_title"
-        app:useSimpleSummaryProvider="true" />
+        <org.lineageos.lineageparts.statusbar.NetworkTrafficArrowsPreference
+            android:key="network_traffic_arrows"
+            android:dependency="network_traffic_hide_arrows"
+            android:title="@string/network_traffic_arrows_title" />
 
-    <ListPreference
-        android:entries="@array/network_traffic_show_units_entries"
-        android:entryValues="@array/network_traffic_show_units_values"
-        android:key="network_traffic_show_units"
-        android:persistent="false"
-        android:title="@string/network_traffic_show_units"
-        app:useSimpleSummaryProvider="true" />
+        <SeekBarPreference
+            android:key="network_traffic_size"
+            android:max="160"
+            android:persistent="false"
+            android:title="@string/network_traffic_size_title"
+            app:min="60"
+            app:seekBarIncrement="5"
+            app:showSeekBarValue="true"
+            app:updatesContinuously="true" />
+
+        <ListPreference
+            android:entries="@array/network_traffic_color_entries"
+            android:entryValues="@array/network_traffic_color_values"
+            android:key="network_traffic_color"
+            android:persistent="false"
+            android:title="@string/network_traffic_color_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <lineageos.preference.LineageSecureSettingSwitchPreference
+            android:defaultValue="false"
+            android:disableDependentsState="true"
+            android:key="network_traffic_hide_arrows"
+            android:summary="@string/network_traffic_hide_arrows_summary"
+            android:title="@string/network_traffic_hide_arrows" />
+
+        <lineageos.preference.LineageSecureSettingSwitchPreference
+            android:defaultValue="true"
+            android:dependency="network_traffic_hide_arrows"
+            android:key="network_traffic_live_arrows"
+            android:summary="@string/network_traffic_live_arrows_summary"
+            android:title="@string/network_traffic_live_arrows" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="network_traffic_behavior"
+        android:title="@string/network_traffic_behavior_title">
+
+        <lineageos.preference.LineageSecureSettingSwitchPreference
+            android:defaultValue="false"
+            android:key="network_traffic_autohide"
+            android:summary="@string/network_traffic_autohide_summary"
+            android:title="@string/network_traffic_autohide" />
+
+        <SeekBarPreference
+            android:dependency="network_traffic_autohide"
+            android:key="network_traffic_autohide_threshold"
+            android:max="100"
+            android:persistent="false"
+            android:title="@string/network_traffic_autohide_threshold"
+            app:min="1"
+            app:showSeekBarValue="true"
+            app:updatesContinuously="true" />
+
+        <ListPreference
+            android:entries="@array/network_traffic_refresh_entries"
+            android:entryValues="@array/network_traffic_refresh_values"
+            android:key="network_traffic_refresh"
+            android:persistent="false"
+            android:title="@string/network_traffic_refresh_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <lineageos.preference.LineageSecureSettingSwitchPreference
+            android:defaultValue="false"
+            android:key="network_traffic_mobile_only"
+            android:summary="@string/network_traffic_mobile_only_summary"
+            android:title="@string/network_traffic_mobile_only" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="network_traffic_units_category"
+        android:title="@string/network_traffic_units_category">
+
+        <ListPreference
+            android:entries="@array/network_traffic_units_entries"
+            android:entryValues="@array/network_traffic_units_values"
+            android:key="network_traffic_units"
+            android:persistent="false"
+            android:title="@string/network_traffic_units_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:entries="@array/network_traffic_show_units_entries"
+            android:entryValues="@array/network_traffic_show_units_values"
+            android:key="network_traffic_show_units"
+            android:persistent="false"
+            android:title="@string/network_traffic_show_units"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

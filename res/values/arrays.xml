@@ -482,6 +482,63 @@
         <item>2</item>
     </string-array>
 
+    <string-array name="network_traffic_style_entries" translatable="false">
+        <item>@string/network_traffic_style_classic</item>
+        <item>@string/network_traffic_style_inline</item>
+        <item>@string/network_traffic_style_pill</item>
+        <item>@string/network_traffic_style_dominant</item>
+        <item>@string/network_traffic_style_meter</item>
+        <item>@string/network_traffic_style_sparkline</item>
+        <item>@string/network_traffic_style_readout</item>
+        <item>@string/network_traffic_style_ring</item>
+    </string-array>
+
+    <string-array name="network_traffic_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="network_traffic_arrows_entries" translatable="false">
+        <item>@string/network_traffic_arrows_classic</item>
+        <item>@string/network_traffic_arrows_triangles</item>
+        <item>@string/network_traffic_arrows_chevrons</item>
+        <item>@string/network_traffic_arrows_lines</item>
+        <item>@string/network_traffic_arrows_rounded</item>
+        <item>@string/network_traffic_arrows_dots</item>
+        <item>@string/network_traffic_arrows_tray</item>
+        <item>@string/network_traffic_arrows_swap</item>
+    </string-array>
+
+    <string-array name="network_traffic_color_entries" translatable="false">
+        <item>@string/network_traffic_color_status_bar</item>
+        <item>@string/network_traffic_color_accent</item>
+        <item>@string/network_traffic_color_speed</item>
+    </string-array>
+
+    <string-array name="network_traffic_color_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="network_traffic_refresh_entries" translatable="false">
+        <item>@string/network_traffic_refresh_1</item>
+        <item>@string/network_traffic_refresh_2</item>
+        <item>@string/network_traffic_refresh_4</item>
+    </string-array>
+
+    <string-array name="network_traffic_refresh_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+    </string-array>
+
     <!-- Sms limit -->
     <string-array name="sms_security_check_limit_entries" translatable="false">
         <item>@string/sms_security_check_limit_always_confirm</item>
