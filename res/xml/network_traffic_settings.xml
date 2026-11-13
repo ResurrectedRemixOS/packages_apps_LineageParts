@@ -7,56 +7,52 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ListPreference
-        android:entries="@array/network_traffic_mode_entries"
-        android:entryValues="@array/network_traffic_mode_values"
-        android:key="network_traffic_mode"
-        android:persistent="false"
-        android:title="@string/network_traffic_mode_title"
-        app:useSimpleSummaryProvider="true" />
+    <org.lineageos.lineageparts.statusbar.NetworkTrafficPreviewPreference
+        android:key="network_traffic_preview"
+        android:title="@string/network_traffic_preview_title" />
 
-    <ListPreference
-        android:entries="@array/network_traffic_position_entries"
-        android:entryValues="@array/network_traffic_position_values"
-        android:key="network_traffic_position"
-        android:persistent="false"
-        android:title="@string/network_traffic_position_title"
-        app:useSimpleSummaryProvider="true" />
+    <PreferenceCategory
+        android:key="network_traffic_show"
+        android:title="@string/network_traffic_show_title">
+
+        <org.lineageos.lineageparts.statusbar.TrafficSegmentedPreference
+            android:entries="@array/network_traffic_mode_short_entries"
+            android:entryValues="@array/network_traffic_mode_values"
+            android:key="network_traffic_mode"
+            app:segmentDefault="0" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="network_traffic_appearance"
         android:title="@string/network_traffic_appearance_title">
 
-        <ListPreference
-            android:entries="@array/network_traffic_style_entries"
-            android:entryValues="@array/network_traffic_style_values"
+        <org.lineageos.lineageparts.statusbar.NetworkTrafficStylePreference
             android:key="network_traffic_style"
-            android:persistent="false"
-            android:title="@string/network_traffic_style_title"
-            app:useSimpleSummaryProvider="true" />
+            android:title="@string/network_traffic_style_title" />
 
         <org.lineageos.lineageparts.statusbar.NetworkTrafficArrowsPreference
             android:key="network_traffic_arrows"
             android:dependency="network_traffic_hide_arrows"
             android:title="@string/network_traffic_arrows_title" />
 
-        <SeekBarPreference
+        <org.lineageos.lineageparts.statusbar.TrafficSliderPreference
             android:key="network_traffic_size"
-            android:max="160"
-            android:persistent="false"
             android:title="@string/network_traffic_size_title"
-            app:min="60"
-            app:seekBarIncrement="5"
-            app:showSeekBarValue="true"
-            app:updatesContinuously="true" />
+            app:sliderDefault="100"
+            app:sliderMax="160"
+            app:sliderMin="60"
+            app:sliderReset="true"
+            app:sliderStep="5"
+            app:sliderUnit="%" />
 
-        <ListPreference
+        <org.lineageos.lineageparts.statusbar.TrafficSegmentedPreference
             android:entries="@array/network_traffic_color_entries"
             android:entryValues="@array/network_traffic_color_values"
             android:key="network_traffic_color"
-            android:persistent="false"
             android:title="@string/network_traffic_color_title"
-            app:useSimpleSummaryProvider="true" />
+            app:segmentDefault="0"
+            app:segmentSummaries="@array/network_traffic_color_summaries" />
 
         <lineageos.preference.LineageSecureSettingSwitchPreference
             android:defaultValue="false"
@@ -65,13 +61,6 @@
             android:summary="@string/network_traffic_hide_arrows_summary"
             android:title="@string/network_traffic_hide_arrows" />
 
-        <lineageos.preference.LineageSecureSettingSwitchPreference
-            android:defaultValue="true"
-            android:dependency="network_traffic_hide_arrows"
-            android:key="network_traffic_live_arrows"
-            android:summary="@string/network_traffic_live_arrows_summary"
-            android:title="@string/network_traffic_live_arrows" />
-
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -79,34 +68,49 @@
         android:title="@string/network_traffic_behavior_title">
 
         <lineageos.preference.LineageSecureSettingSwitchPreference
+            android:defaultValue="true"
+            android:dependency="network_traffic_hide_arrows"
+            android:key="network_traffic_live_arrows"
+            android:summary="@string/network_traffic_live_arrows_summary"
+            android:title="@string/network_traffic_live_arrows" />
+
+        <lineageos.preference.LineageSecureSettingSwitchPreference
             android:defaultValue="false"
             android:key="network_traffic_autohide"
             android:summary="@string/network_traffic_autohide_summary"
             android:title="@string/network_traffic_autohide" />
 
-        <SeekBarPreference
+        <org.lineageos.lineageparts.statusbar.TrafficSliderPreference
             android:dependency="network_traffic_autohide"
             android:key="network_traffic_autohide_threshold"
-            android:max="100"
-            android:persistent="false"
             android:title="@string/network_traffic_autohide_threshold"
-            app:min="1"
-            app:showSeekBarValue="true"
-            app:updatesContinuously="true" />
+            app:sliderDefault="1"
+            app:sliderMax="100"
+            app:sliderMin="1"
+            app:sliderStep="1"
+            app:sliderUnit="kB/s" />
 
-        <ListPreference
+        <org.lineageos.lineageparts.statusbar.TrafficSegmentedPreference
             android:entries="@array/network_traffic_refresh_entries"
             android:entryValues="@array/network_traffic_refresh_values"
             android:key="network_traffic_refresh"
-            android:persistent="false"
+            android:summary="@string/network_traffic_refresh_summary"
             android:title="@string/network_traffic_refresh_title"
-            app:useSimpleSummaryProvider="true" />
+            app:segmentDefault="2" />
 
         <lineageos.preference.LineageSecureSettingSwitchPreference
             android:defaultValue="false"
             android:key="network_traffic_mobile_only"
             android:summary="@string/network_traffic_mobile_only_summary"
             android:title="@string/network_traffic_mobile_only" />
+
+        <ListPreference
+            android:entries="@array/network_traffic_position_entries"
+            android:entryValues="@array/network_traffic_position_values"
+            android:key="network_traffic_position"
+            android:persistent="false"
+            android:title="@string/network_traffic_position_title"
+            app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
 

@@ -16,5 +16,19 @@
         <attr name="digits" format="integer" />
     </declare-styleable>
 
+    <declare-styleable name="TrafficSliderPreference">
+        <attr name="sliderMin" format="integer" />
+        <attr name="sliderMax" format="integer" />
+        <attr name="sliderStep" format="integer" />
+        <attr name="sliderDefault" format="integer" />
+        <attr name="sliderUnit" format="string" />
+        <attr name="sliderReset" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TrafficSegmentedPreference">
+        <attr name="segmentDefault" format="integer" />
+        <attr name="segmentSummaries" format="reference" />
+    </declare-styleable>
+
     <attr name="wifi_signal_color" format="reference" />
 </resources>
